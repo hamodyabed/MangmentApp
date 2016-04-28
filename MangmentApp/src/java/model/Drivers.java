@@ -10,7 +10,7 @@ package model;
  * @author iyada
  */
 public class Drivers {
-    
+
     private String driverName;
     private String driverID;
     private String driverStartDay;
@@ -40,7 +40,6 @@ public class Drivers {
         this.driverLicenseType = driverLicenseType;
     }
 
-
     public String getDriverLicenseExpiredDay() {
         return driverLicenseExpiredDay;
     }
@@ -49,7 +48,6 @@ public class Drivers {
         this.driverLicenseExpiredDay = driverLicenseExpiredDay;
     }
 
-
     public String getDriverLicenseNumber() {
         return driverLicenseNumber;
     }
@@ -57,7 +55,7 @@ public class Drivers {
     public void setDriverLicenseNumber(String driverLicenseNumber) {
         this.driverLicenseNumber = driverLicenseNumber;
     }
-    
+
     public String getDriverLicenseDay() {
         return driverLicenseDay;
     }
@@ -65,7 +63,6 @@ public class Drivers {
     public void setDriverLicenseDay(String driverLicenseDay) {
         this.driverLicenseDay = driverLicenseDay;
     }
-
 
     public String getDriverSalary() {
         return driverSalary;
@@ -75,7 +72,6 @@ public class Drivers {
         this.driverSalary = driverSalary;
     }
 
-
     public String getDriverBirthDay() {
         return driverBirthDay;
     }
@@ -83,9 +79,6 @@ public class Drivers {
     public void setDriverBirthDay(String driverBirthDay) {
         this.driverBirthDay = driverBirthDay;
     }
-
-
-    
 
     public String getDriverPhoneNumber2() {
         return driverPhoneNumber2;
