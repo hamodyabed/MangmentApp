@@ -12,7 +12,8 @@ namespace WebApplication1
 {
     public partial class customers : System.Web.UI.Page
     {
-
+        DataTable a;
+        string connectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -20,14 +21,14 @@ namespace WebApplication1
             SqlCommand command;
             string sql = null;
 
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Managment\\WebApplication1\\WebApplication1\\App_Data\\mysql.mdf;Integrated Security=True;Connect Timeout=30";
+             connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Managment\\WebApplication1\\WebApplication1\\App_Data\\mysql.mdf;Integrated Security=True;Connect Timeout=30";
             SqlConnection connection = new SqlConnection(connectionString);
             SqlDataReader dataReader;
 
             try
             {
                 connection.Open();
-                sql = "select * from  customer";
+                sql = "select * from customer";
                 command = new SqlCommand(sql, connection);
                 /*
                 dataReader = command.ExecuteReader();
@@ -40,17 +41,13 @@ namespace WebApplication1
                 }*/
 
                 command.ExecuteNonQuery();
-
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 adapter.SelectCommand = command;
-                DataTable a = new DataTable();
+                a = new DataTable();
                 adapter.Fill(a);
+                GridView1.DataSource = a;
+                GridView1.DataBind();
 
-               // BindingSource bSource = new BindingSource();
-               // GridView1.DataSource = a;
-               // GridView1.DataBind();
-
-                //dataReader.Close();
                 command.Dispose();
                 connection.Close();
 
@@ -61,5 +58,25 @@ namespace WebApplication1
 
             }
     }
+
+        protected void GridView1_RowDeleted(object sender, GridViewDeletedEventArgs e)
+        {
+            Debug.WriteLine("***");
+        }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e) {            
+            string sql = "select * from customer where שם LIKE '"+ TextBox1.Text + "%'"  ;
+            SqlDataAdapter adapter = new SqlDataAdapter(sql,connectionString);
+            //adapter.SelectCommand = command;
+            a = new DataTable();
+            adapter.Fill(a);
+            GridView1.DataSource = a;
+            GridView1.DataBind();
+           
+
+        }
+        
     }
-}
+
+
+    }
