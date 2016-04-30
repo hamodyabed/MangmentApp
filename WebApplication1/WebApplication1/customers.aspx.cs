@@ -47,8 +47,8 @@ namespace WebApplication1
                 adapter.Fill(a);
 
                // BindingSource bSource = new BindingSource();
-                GridView1.DataSource = a;
-                GridView1.DataBind();
+               // GridView1.DataSource = a;
+               // GridView1.DataBind();
 
                 //dataReader.Close();
                 command.Dispose();
