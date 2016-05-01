@@ -80,18 +80,21 @@ namespace WebApplication1
         {
             //Label label = (Label)GridView1.Rows[e.RowIndex].
             int index = Convert.ToInt32(e.RowIndex);
-            DataRow row = 
-           // string aa = label.Text;
 
+            string strPersonID = GridView1.Rows[e.RowIndex].Cells[3].Text;
+
+           // DataRow row = 
+           // string aa = label.Text;
+           /*
             string sql = "select * from customer where שם LIKE '" + TextBox1.Text + "%'";
             SqlDataAdapter adapter = new SqlDataAdapter(sql, connectionString);
             //adapter.SelectCommand = command;
             a = new DataTable();
             adapter.Fill(a);
             GridView1.DataSource = a;
-            GridView1.DataBind();
+            GridView1.DataBind();*/
 
-            Debug.WriteLine("deelted");
+            Debug.WriteLine("deelted" + strPersonID);
             // Delete the record 
            // if (e.Exception == null)
            // {
