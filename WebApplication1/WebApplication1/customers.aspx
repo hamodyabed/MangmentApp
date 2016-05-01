@@ -83,9 +83,15 @@
 
 
         </div>
-        <asp:Button ID="Button12" runat="server" Text="Button" style="float:right;" OnClick="TextBox1_TextChanged"/>
-        <asp:GridView ID="GridView1" runat="server" style="float:right;">
+        <asp:GridView ID="GridView1" runat="server" style="float:right;" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowDeleting="GridView1_RowDeleted" OnRowUpdating="GridView1_RowUpdating" >
+            <Columns>
+                <asp:CommandField ShowDeleteButton="True" DeleteText="מחיקה" />
+                <asp:CommandField EditText="עריכה" ShowEditButton="True" />
+            </Columns>
+            
         </asp:GridView>
+
+
     </form>
 </body>
 </html>
