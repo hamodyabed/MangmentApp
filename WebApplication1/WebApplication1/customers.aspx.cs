@@ -18,8 +18,7 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (!Page.IsPostBack)
-            {
+           
 
 
                 SqlCommand command;
@@ -62,16 +61,16 @@ namespace WebApplication1
                 {
 
                 }
-            }
+            
             
     }
-
+        /*
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             GridView1.PageIndex = e.NewPageIndex;
 
             GridView1.DataBind();
-        }
+        }*/
 
 
 
@@ -102,14 +101,14 @@ namespace WebApplication1
          
         }
 
-
+       
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             //Accessing Edited values from the GridView
-            string id = ((Label)GridView1.Rows[e.RowIndex].Cells[3].FindControl("LabelID")).Text; //ID
-            string employee = ((TextBox)GridView1.Rows[e.RowIndex].Cells[0].FindControl("TextBoxEditEmployee")).Text; //Employee
-            string position = ((TextBox)GridView1.Rows[e.RowIndex].Cells[1].FindControl("TextBoxEditPosition")).Text; //Position
-            string team = ((TextBox)GridView1.Rows[e.RowIndex].Cells[2].FindControl("TextBoxEditTeam")).Text; //Team
+            string id = ((Label)GridView1.Rows[e.RowIndex].Cells[3].FindControl("שם")).Text; //ID
+          //  string employee = ((TextBox)GridView1.Rows[e.RowIndex].Cells[0].FindControl("TextBoxEditEmployee")).Text; //Employee
+           // string position = ((TextBox)GridView1.Rows[e.RowIndex].Cells[1].FindControl("TextBoxEditPosition")).Text; //Position
+           // string team = ((TextBox)GridView1.Rows[e.RowIndex].Cells[2].FindControl("TextBoxEditTeam")).Text; //Team
 
           //  UpdateRecord(id, employee, position, team); // call update method
 
