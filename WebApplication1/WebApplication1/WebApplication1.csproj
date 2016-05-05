@@ -202,12 +202,13 @@
     <Content Include="App_Data\mysql_log.ldf">
       <DependentUpon>mysql.mdf</DependentUpon>
     </Content>
+    <Content Include="MyProject\Classes\Customers\AddNewCustamer.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\menu.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="customers.aspx" />
+    <Content Include="MyProject\Classes\Customers\customers.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -216,8 +217,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="MainMenu.aspx" />
-    <Content Include="orders.aspx" />
+    <Content Include="MyProject\Classes\MainMenu\MainMenu.aspx" />
+    <Content Include="MyProject\Classes\Orders\orders.aspx" />
     <Content Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Content>
@@ -399,6 +400,16 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="MyProject\Classes\Customers\AddNewCustamer.aspx.cs">
+      <DependentUpon>AddNewCustamer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyProject\Classes\Customers\AddNewCustamer.aspx.designer.cs">
+      <DependentUpon>AddNewCustamer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyProject\Classes\Base\Person.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -406,11 +417,11 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="customers.aspx.cs">
+    <Compile Include="MyProject\Classes\Customers\customers.aspx.cs">
       <DependentUpon>customers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="customers.aspx.designer.cs">
+    <Compile Include="MyProject\Classes\Customers\customers.aspx.designer.cs">
       <DependentUpon>customers.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataSet1.Designer.cs">
@@ -428,12 +439,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MyProject\Helpers\DBHelper.cs" />
+    <Compile Include="MyProject\Helpers\Helper.cs" />
     <Compile Include="KeyPressEventArgs.cs" />
-    <Compile Include="MainMenu.aspx.cs">
+    <Compile Include="MyProject\Classes\MainMenu\MainMenu.aspx.cs">
       <DependentUpon>MainMenu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MainMenu.aspx.designer.cs">
+    <Compile Include="MyProject\Classes\MainMenu\MainMenu.aspx.designer.cs">
       <DependentUpon>MainMenu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
@@ -474,11 +487,11 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="orders.aspx.cs">
+    <Compile Include="MyProject\Classes\Orders\orders.aspx.cs">
       <DependentUpon>orders.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="orders.aspx.designer.cs">
+    <Compile Include="MyProject\Classes\Orders\orders.aspx.designer.cs">
       <DependentUpon>orders.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
