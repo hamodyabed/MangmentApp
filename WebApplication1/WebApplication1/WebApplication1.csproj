@@ -198,17 +198,15 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="App_Data\mysql.mdf" />
-    <Content Include="App_Data\mysql_log.ldf">
-      <DependentUpon>mysql.mdf</DependentUpon>
+    <Content Include="App_Data\ProjectData.mdf" />
+    <Content Include="App_Data\ProjectData_log.ldf">
+      <DependentUpon>ProjectData.mdf</DependentUpon>
     </Content>
-    <Content Include="MyProject\Classes\Customers\AddNewCustamer.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\menu.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="MyProject\Classes\Customers\customers.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -217,6 +215,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="MyProject\Classes\Customers\AddNewCustomer.aspx" />
+    <Content Include="MyProject\Classes\Customers\CustomerMaster.aspx" />
     <Content Include="MyProject\Classes\MainMenu\MainMenu.aspx" />
     <Content Include="MyProject\Classes\Orders\orders.aspx" />
     <Content Include="DataSet1.xsc">
@@ -400,13 +400,6 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="MyProject\Classes\Customers\AddNewCustamer.aspx.cs">
-      <DependentUpon>AddNewCustamer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MyProject\Classes\Customers\AddNewCustamer.aspx.designer.cs">
-      <DependentUpon>AddNewCustamer.aspx</DependentUpon>
-    </Compile>
     <Compile Include="MyProject\Classes\Base\Person.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -416,13 +409,6 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MyProject\Classes\Customers\customers.aspx.cs">
-      <DependentUpon>customers.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MyProject\Classes\Customers\customers.aspx.designer.cs">
-      <DependentUpon>customers.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -439,8 +425,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="MyProject\Helpers\DBHelper.cs" />
-    <Compile Include="MyProject\Helpers\Helper.cs" />
+    <Compile Include="MyProject\Classes\Customers\AddNewCustomer.aspx.cs">
+      <DependentUpon>AddNewCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyProject\Classes\Customers\AddNewCustomer.aspx.designer.cs">
+      <DependentUpon>AddNewCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyProject\Classes\Customers\CustomerMaster.aspx.cs">
+      <DependentUpon>CustomerMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyProject\Classes\Customers\CustomerMaster.aspx.designer.cs">
+      <DependentUpon>CustomerMaster.aspx</DependentUpon>
+    </Compile>
     <Compile Include="KeyPressEventArgs.cs" />
     <Compile Include="MyProject\Classes\MainMenu\MainMenu.aspx.cs">
       <DependentUpon>MainMenu.aspx</DependentUpon>
@@ -495,7 +493,9 @@
       <DependentUpon>orders.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="MyProject\Helpers\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
