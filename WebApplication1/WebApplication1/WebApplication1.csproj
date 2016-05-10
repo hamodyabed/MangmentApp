@@ -217,6 +217,8 @@
     </Content>
     <Content Include="MyProject\Classes\Customers\AddNewCustomer.aspx" />
     <Content Include="MyProject\Classes\Customers\CustomerMaster.aspx" />
+    <Content Include="MyProject\Classes\Drivers\AddNewDriver.aspx" />
+    <Content Include="MyProject\Classes\Drivers\DiverMaster.aspx" />
     <Content Include="MyProject\Classes\MainMenu\MainMenu.aspx" />
     <Content Include="MyProject\Classes\Orders\orders.aspx" />
     <Content Include="DataSet1.xsc">
@@ -400,9 +402,6 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="MyProject\Classes\Base\Person.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -440,6 +439,20 @@
       <DependentUpon>CustomerMaster.aspx</DependentUpon>
     </Compile>
     <Compile Include="KeyPressEventArgs.cs" />
+    <Compile Include="MyProject\Classes\Drivers\AddNewDriver.aspx.cs">
+      <DependentUpon>AddNewDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyProject\Classes\Drivers\AddNewDriver.aspx.designer.cs">
+      <DependentUpon>AddNewDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyProject\Classes\Drivers\DiverMaster.aspx.cs">
+      <DependentUpon>DiverMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyProject\Classes\Drivers\DiverMaster.aspx.designer.cs">
+      <DependentUpon>DiverMaster.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MyProject\Classes\MainMenu\MainMenu.aspx.cs">
       <DependentUpon>MainMenu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
