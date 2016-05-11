@@ -218,6 +218,7 @@
     <Content Include="MyProject\Classes\Customers\AddNewCustomer.aspx" />
     <Content Include="MyProject\Classes\Customers\CustomerMaster.aspx" />
     <Content Include="MyProject\Classes\Drivers\AddNewDriver.aspx" />
+    <Content Include="MyProject\Classes\Drivers\AdvanceSalary.aspx" />
     <Content Include="MyProject\Classes\Drivers\DiverMaster.aspx" />
     <Content Include="MyProject\Classes\MainMenu\MainMenu.aspx" />
     <Content Include="MyProject\Classes\Orders\orders.aspx" />
@@ -445,6 +446,13 @@
     </Compile>
     <Compile Include="MyProject\Classes\Drivers\AddNewDriver.aspx.designer.cs">
       <DependentUpon>AddNewDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyProject\Classes\Drivers\AdvanceSalary.aspx.cs">
+      <DependentUpon>AdvanceSalary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyProject\Classes\Drivers\AdvanceSalary.aspx.designer.cs">
+      <DependentUpon>AdvanceSalary.aspx</DependentUpon>
     </Compile>
     <Compile Include="MyProject\Classes\Drivers\DiverMaster.aspx.cs">
       <DependentUpon>DiverMaster.aspx</DependentUpon>
